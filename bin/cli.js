@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
-'use strict'
+var chalk = require('chalk')
+var path = require('path')
+var program = require('commander')
 
-const chalk = require('chalk')
-const path = require('path')
-const program = require('commander')
+var converter = require('../converter')
+var pkg = require('../package.json')
 
-const converter = require('../converter')
-const pkg = require('../package.json')
-
-const cwd = process.cwd()
+var cwd = process.cwd()
 
 function handleWrite(error) {
   if (error) {
